@@ -33,6 +33,8 @@ export SCI_SUM=false
 export USE_ABSTRACT_SCORES=false
 export SCI_SUM_FAKE_SCORES=false  # use fake scores for testing
 
+export SERIALIZATION_DIR=serialization
+
 CONFIG_FILE=sequential_sentence_classification/config.jsonnet
 
 python -m allennlp.run train $CONFIG_FILE  --include-package sequential_sentence_classification -s $SERIALIZATION_DIR "$@"
